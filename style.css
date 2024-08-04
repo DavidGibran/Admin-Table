@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(#088395, #071952)
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #0d47a1;
+}
+.login-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+.login-container h1 {
+    margin: 0 0 20px;
+}
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+.head-container {
+    padding: 20px 20px 0px 20px;
+}
+.perkara-container {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #7AB2B2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.perkara-container > h4 {
+    color: white;
+    font-size: 16px;
+}
+.btn-tahun-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.btn-tahun {
+    background-color: #19A7CE;
+    padding: 5px;
+    width: 80px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.btn-tahun > h5 {
+    color: white;
+    font-size: 16px;
+}
+.btn-tahun:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.atau {
+    padding: 10px 15px 25px 15px;
+}
+.atau > p {
+    font-size: 18px;
+}
+.input-perkara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 5px 0px;
+}
+.no-perkara {
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.no-perkara::placeholder {
+    color: #999;
+}
+.no-perkara:hover {
+    border-color: #888;
+}
+.no-perkara:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+.btn-src {
+    width: 100%;
+    height: 30px;
+    background-color: #399918;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.btn-out {
+    width: 100%;
+    height: 30px;
+    background-color: #FF4C4C;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.btn-src-container p, .guest-out p {
+    color: white;
+    font-size: 14px;
+}
+.btn-src:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.btn-out:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); 
+    display: none; 
+    z-index: 999; 
+}
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(2, 0, 0, 0.2);
+    display: none; 
+    z-index: 1000; 
+    max-width: 90%;
+    width: 300px;
+}
+.notification-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.notification-text {
+    font-size: 16px;
+}
+.notif-header{
+    margin-bottom: 5px;
+}
+.notification-close {
+    background: #FF4C4C;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 80%;
+    height: 35px;
+    border-radius: 5px;
+}
+.text-content-pop{
+    padding: 10px;
+}
+.bold{
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 80%;
+        padding: 15px;
+    }
+    .logo {
+        width: 90px;
+    }
+    .header-input h3 {
+        font-size: 16px;
+    }
+    .perkara-container {
+        height: 35px;
+        padding: 8px;
+    }
+    .perkara-container > h4 {
+        font-size: 14px;
+    }
+    .btn-tahun {
+        width: 70px;
+        height: 30px;
+    }
+    .btn-tahun > h5 {
+        font-size: 14px;
+    }
+    .atau > p {
+        font-size: 16px;
+    }
+    .no-perkara {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .input-perkara {
+        margin: 8px 0 4px;
+    }
+    .btn-src, .btn-out {
+        height: 28px;
+    }
+    .btn-src-container p, .guest-out p {
+        font-size: 12px;
+    }
+    .head-container h2 {
+        font-size: 20px;
+    }
+    .head-container h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 10px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .header-input h3 {
+        font-size: 14px;
+    }
+    .perkara-container {
+        height: 30px;
+        padding: 6px;
+    }
+    .perkara-container > h4 {
+        font-size: 12px;
+    }
+    .btn-tahun {
+        width: 60px;
+        height: 28px;
+    }
+    .btn-tahun > h5 {
+        font-size: 12px;
+    }
+    .atau > p {
+        font-size: 14px;
+    }
+    .no-perkara {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .input-perkara {
+        margin: 6px 0 3px;
+    }
+    .btn-src, .btn-out {
+        height: 26px;
+    }
+    .btn-src-container p, .guest-out p {
+        font-size: 10px;
+    }
+    .head-container h2 {
+        font-size: 16px;
+    }
+    .head-container h4 {
+        font-size: 12px;
+    }
+}
